@@ -14,6 +14,7 @@
         <spring.boot.version>2.7.1</spring.boot.version>
         <lombok.version>1.18.24</lombok.version>
         <mysql.database.version>8.0.28</mysql.database.version>
+        <h2.database.version>2.1.214</h2.database.version>
     </properties>
 
 
@@ -60,6 +61,13 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.database.version}</version>
+        </dependency>
+
+        <!-- 单元测试时使用 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.database.version}</version>
         </dependency>
     </dependencies>
 
