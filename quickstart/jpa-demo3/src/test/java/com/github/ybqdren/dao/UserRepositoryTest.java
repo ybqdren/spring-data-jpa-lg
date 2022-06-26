@@ -28,6 +28,12 @@ public class UserRepositoryTest {
     private UserRepository userRepository;
 
 
+    /**
+     Hibernate: call next value for hibernate_sequence
+     Hibernate: insert into user_info (email, name, id) values (?, ?, ?)
+     Hibernate: select userinfo0_.id as id1_0_, userinfo0_.email as email2_0_, userinfo0_.name as name3_0_ from user_info userinfo0_
+     [UserInfo(id=1, name=jackxx, email=123456@126.com)]
+     */
     @Test
     public void testSaveUser() {
         UserInfo user = userRepository.save(UserInfo.builder().name("jackxx").email("123456@126.com").build());
